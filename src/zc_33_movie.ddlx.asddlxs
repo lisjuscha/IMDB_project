@@ -12,7 +12,8 @@ annotate view ZC_33_Movie with
   /* Facets */
   @UI.facet: [
   { position: 10, label: 'Movie Details', type: #FIELDGROUP_REFERENCE, targetQualifier: 'Details'  },
-  { position: 20, label: 'Administrative Data', type: #FIELDGROUP_REFERENCE, targetQualifier: 'Data'  }]
+  { position: 20, label: 'Administrative Data', type: #FIELDGROUP_REFERENCE, targetQualifier: 'Data'  },
+  { position: 30, label: 'Ratings', type: #LINEITEM_REFERENCE, targetElement: '_Ratings'  }]
 
     /* Fields */
   @UI.lineItem: [{ position: 10 }]
@@ -35,6 +36,12 @@ annotate view ZC_33_Movie with
   @UI.fieldGroup: [{ qualifier: 'Details', position: 40 }]
   RuntimeInMin;
 
+  @UI.lineItem: [{ position: 60, label: 'Average Rating', criticality: 'AVGRatingCriticality', criticalityRepresentation: #WITHOUT_ICON }]
+  AVGRating;
+
+  @UI.fieldGroup: [{ qualifier: 'Details', position: 50 }]
+  ImageURL;
+
 
   @UI.fieldGroup: [{ qualifier: 'Data', position: 50 }]
   MovieUUID;
@@ -54,4 +61,7 @@ annotate view ZC_33_Movie with
 
   @UI.fieldGroup: [{ qualifier: 'Data', position: 40 }]
   LastChangedBy;
+
+
+  
 }

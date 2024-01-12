@@ -3,10 +3,13 @@
 {
 "FROM":
 [
+"ZI_33_AVGRATING",
 "ZABAP_MOVIE_A"
 ],
 "ASSOCIATED":
-[],
+[
+"ZR_33_RATING"
+],
 "BASE":
 [],
 "ANNO_REF":

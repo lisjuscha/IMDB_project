@@ -15,5 +15,9 @@ define root view entity ZC_33_Movie
       CreatedAt,
       CreatedBy,
       LastChangedAt,
-      LastChangedBy
+      LastChangedBy,
+      AVGRating,
+      AVGRatingCriticality,
+
+      _Ratings : redirected to composition child ZC_33_Rating
 }
